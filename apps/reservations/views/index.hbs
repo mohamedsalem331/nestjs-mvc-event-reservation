@@ -1,0 +1,24 @@
+{{!-- {{!< index}} --}} {{#> app}}
+  {{#*inline "content"}}
+  <section class="d-flex flex-row justify-content-between">
+    {{#if events}}
+    {{#each events}}
+    <div class="card" style="width: 21rem;">
+      <img src={{imageUrl}} class="card-img-top" height="250" alt={{name}}>
+      <div class="card-body bg-success-subtle">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+        <div class="d-flex flex-column  py-2">
+          <span class="card-text">Available Tickets: {{tickets}}</span>
+          <span class="card-text">Price: {{price}}</span>
+        </div>
+        <a href="http://localhost:3000/reservations/app/{{_id}}" class="btn btn-primary">Reserve Ticket</a>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <span class="text-center fs-1 fw-bolder">No Events Available</span>
+    {{/if}}
+  </section>
+  {{/inline}}
+  {{/app}}

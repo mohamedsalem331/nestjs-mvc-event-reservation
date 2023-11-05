@@ -1,0 +1,46 @@
+{{#> app}}
+{{#*inline "content"}}
+<div class='container'>
+  <form class='form-group' method="POST" action="http://localhost:3000/reservations">
+    <!-- Use 'col-md-6 offset-md-3' to center the inputs in a column -->
+
+    <div class='col-md-6 offset-md-3'>
+      <span id="tickets-prices" class="text-center fs-3 fw-bolder d-block my-5">
+        <span id="tickets-price" style="color: rgb(31, 31, 31) 255, 115);" hidden>{{event.price}}</span>
+      </span>
+      <label for='eventname'>Event Name</label>
+      <input name="eventname" type='text' id='eventname' class='form-control mb-3' readonly value={{event.name}} />
+
+      <label for='email'>Email</label>
+      <input name="email" type='email' id='email' class='form-control mb-3' value={{user.email}} />
+
+      <label for='tickets'>Tickets</label>
+      <input name="tickets" id="tickets-input" type='number' id='tickets' class='form-control mb-3' value="1" min="1" />
+
+      <section class="mt-4">
+        <div>
+          <label for='cardnumber'>Card Number</label>
+          <input name="cardnumber" type='text' id='card-number' class='form-control mb-3' readonly
+            value="4242 4242 4242 4242" />
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+          <div>
+            <label for='cardexpire'>Expiry Date</label>
+            <input name="cardexpire" type='text' id='card-expire' class='form-control mb-3' readonly value="12/2027" />
+          </div>
+          <div>
+            <label for='cardcvc'>CVC</label>
+            <input name="cardcvc" type='number' id='card-cvc' class='form-control mb-3' readonly value="413" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Add a submit button with the class 'btn btn-primary' -->
+      <button type='submit' id="submit-reservation" class='btn btn-primary'>Submit</button>
+      <hr />
+      <span id="tickets-totalprice" class="text-center fs-3 fw-bolder">Total Price: {{event.price}}</span>
+    </div>
+  </form>
+</div>
+{{/inline}}
+{{/app}}
