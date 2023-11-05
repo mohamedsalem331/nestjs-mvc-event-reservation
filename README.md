@@ -24,6 +24,10 @@
 
 # Excursia
 
+A Microservices Backend Nestjs MVC app for events & ticket reservation, allow user to authenticate and reserve any number of tickets. The app was heavily focused on ensuring it is a production reliable reservation app meaning it can handle concurrency, heavy requests loads and handling race conditions using mongoose optimistic concurrency and rabbitmq.
+
+The app was load tested to handle over 5k requests making sure ticket reservation is optimized and race conditions wont errupt meaning thousand users can reserve tickets without read/write database confilict operations, using mongoose optimistic concurrency & transactions & rabbitmq.
+
 ![alt text](libs/common/public/Vector.png)
 ![alt text](libs/common/public/demo1.png)
 ![alt text](libs/common/public/demo2.png)
@@ -43,12 +47,6 @@ I always wanted to build a microservices backend app that can handle a common is
 - Docker
 - Kubernetes
 - Google Cloud
-
-#### Description
-
-A Microservices Backend Nestjs MVC app for events & ticket reservation, allow user to authenticate and reserve any number of tickets. The app was heavily focused on ensuring it is a production reliable reservation app meaning it can handle concurrency, heavy requests loads and handling race conditions using mongoose optimistic concurrency and rabbitmq.
-
-The app was load tested to handle over 5k requests making sure ticket reservation is optimized and race conditions wont errupt meaning thousand users can reserve tickets without read/write database confilict operations, using mongoose optimistic concurrency & transactions & rabbitmq.
 
 ## Installation
 
