@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-  <img src="https://imageupload.io/ib/tYIEUvZsEO8z8r0_1699169553.png" width="150" alt="Nest Logo" />
+  ![alt text](libs/common/public/Vector.png)
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
